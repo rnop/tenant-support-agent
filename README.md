@@ -3,7 +3,7 @@ An agentic RAG assistant for the tenant portal that securely retrieves property 
 
 
 ### Repository Structure
-
+```md
 backend/src/
 ├── agents/
 ├── api/
@@ -18,3 +18,4 @@ frontend/
 evals/
 docs/
 data/synthetic/
+```
