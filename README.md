@@ -19,3 +19,7 @@ evals/
 docs/
 data/synthetic/
 ```
+
+
+S3 (docs) → Lambda/ECS (parse + chunk + embed via Bedrock) → RDS pgvector (store)
+Query → RDS pgvector (hybrid search) → reranker (SageMaker or in-code) → Bedrock LLM → response
