@@ -1,0 +1,7 @@
+# Text files are stored and checked out with LF (the app runs in a Linux container).
+* text=auto eol=lf
+
+# Corpus documents and images must never be line-ending converted.
+*.pdf  binary
+*.docx binary
+*.png  binary

@@ -1,0 +1,77 @@
+# Tenant RAG — Maple Court
+#
+# Host ports are offset from the defaults (5433, 6380, 8002, 8080): 5432 is held
+# by a native Windows PostgreSQL install on this machine. Service names (`postgres`, `redis`) are NOT
+# arbitrary — they are the hostnames in DATABASE_URL and REDIS_URL in .env.
+
+name: tenant-rag
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    container_name: tenant-db
+    environment:
+      # Must match the database name at the end of DATABASE_URL in .env.
+      POSTGRES_DB: tenant
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: newpassword
+    ports:
+      # Host-side only (pgAdmin, scripts); in-network the app still uses postgres:5432.
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d tenant"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    volumes:
+      - tenant-pgdata:/var/lib/postgresql/data
+      - ./init-db:/docker-entrypoint-initdb.d
+
+  redis:
+    image: redis/redis-stack:latest
+    container_name: tenant-redis
+    ports:
+      - "6380:6379"
+      - "8002:8001"   # RedisInsight
+    environment:
+      REDIS_ARGS: "--appendonly yes"
+    volumes:
+      - tenant-redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tenant-app
+    ports:
+      - "8080:8000"
+    env_file:
+      - .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      # rag.py calls set_llm_cache(RedisSemanticCache(...)) at module scope, so
+      # importing the app opens a Redis connection. Without this condition the
+      # app can start before Redis is accepting connections and die on import.
+      redis:
+        condition: service_healthy
+    volumes:
+      - .:/app
+    healthcheck:
+      # curl, not wget: the Dockerfile installs curl and python:3.11-slim ships
+      # neither by default. /health must exist in app/api.py — see README.
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8000/health || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 30
+      start_period: 20s
+    restart: unless-stopped
+
+volumes:
+  tenant-pgdata:
+  tenant-redis-data:

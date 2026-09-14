@@ -1,0 +1,1354 @@
+{
+  "generated_by": "scripts/build_manifest.py",
+  "source": "data/metadata.json",
+  "note": "Ingest-ready document manifest. Supersession links are derived from the version chain and are symmetric. effective_to is null for open-ended documents; effective_to_eff carries the sentinel 9999-12-31 so range filters need no NULL handling. Nothing here is relative to the current date - whether a document is in force is decided at query time by the effective_from/effective_to_eff range, NOT by is_superseded or is_latest_version. Those two are structural and can disagree with currency: a version can be superseded by a document that has not taken effect yet, and is then still the one in force.",
+  "open_ended_sentinel": "9999-12-31",
+  "filter_columns": [
+    "category",
+    "doc_id",
+    "property_id",
+    "doc_type",
+    "version",
+    "effective_from",
+    "effective_to_eff",
+    "is_template",
+    "disposition_hint"
+  ],
+  "documents": [
+    {
+      "path": "addenda/addendum_bed_bug.v1.docx",
+      "category": "addenda",
+      "format": "docx",
+      "doc_id": "maple-court-addendum-bed-bug-v1",
+      "property_id": "maple-court",
+      "doc_type": "addendum_bed_bug",
+      "title": "Bed Bug Addendum (Template) — Maple Court",
+      "version": 1,
+      "effective_from": "2025-04-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 1,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Civ. Code 1954.603",
+        "Civ. Code 1954.604"
+      ],
+      "disposition_hint": "answer",
+      "is_template": true,
+      "sections": [
+        {
+          "number": "1",
+          "title": "What this addendum is"
+        },
+        {
+          "number": "2",
+          "title": "General information about bed bugs"
+        },
+        {
+          "number": "3",
+          "title": "How to recognise an infestation"
+        },
+        {
+          "number": "4",
+          "title": "Reporting"
+        },
+        {
+          "number": "5",
+          "title": "Notification of inspection results"
+        },
+        {
+          "number": "6",
+          "title": "Preparing for treatment"
+        },
+        {
+          "number": "7",
+          "title": "What the owner does not do"
+        },
+        {
+          "number": "8",
+          "title": "Signatures"
+        }
+      ]
+    },
+    {
+      "path": "addenda/addendum_mold.v1.docx",
+      "category": "addenda",
+      "format": "docx",
+      "doc_id": "maple-court-addendum-mold-v1",
+      "property_id": "maple-court",
+      "doc_type": "addendum_mold",
+      "title": "Mold & Moisture Addendum (Template) — Maple Court",
+      "version": 1,
+      "effective_from": "2025-04-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 1,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "H&S Code 26147",
+        "Civ. Code 1941.1"
+      ],
+      "disposition_hint": "answer",
+      "is_template": true,
+      "sections": [
+        {
+          "number": "1",
+          "title": "What this addendum is"
+        },
+        {
+          "number": "2",
+          "title": "The owner's statement"
+        },
+        {
+          "number": "3",
+          "title": "What the resident agrees to do"
+        },
+        {
+          "number": "4",
+          "title": "What the resident agrees to report"
+        },
+        {
+          "number": "5",
+          "title": "What the owner does"
+        },
+        {
+          "number": "6",
+          "title": "Access for inspection and remediation"
+        },
+        {
+          "number": "7",
+          "title": "Signatures"
+        }
+      ]
+    },
+    {
+      "path": "addenda/addendum_pet.v1.docx",
+      "category": "addenda",
+      "format": "docx",
+      "doc_id": "maple-court-addendum-pet-v1",
+      "property_id": "maple-court",
+      "doc_type": "addendum_pet",
+      "title": "Pet Addendum (Template) — Maple Court",
+      "version": 1,
+      "effective_from": "2025-04-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 1,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Gov. Code 12955 (FEHA)",
+        "AB 468 (2021)"
+      ],
+      "disposition_hint": "answer",
+      "is_template": true,
+      "sections": [
+        {
+          "number": "1",
+          "title": "What this addendum is"
+        },
+        {
+          "number": "2",
+          "title": "This addendum does not apply to assistance animals"
+        },
+        {
+          "number": "3",
+          "title": "Approved animal"
+        },
+        {
+          "number": "4",
+          "title": "Charges"
+        },
+        {
+          "number": "5",
+          "title": "Conditions"
+        },
+        {
+          "number": "6",
+          "title": "Withdrawal of approval"
+        },
+        {
+          "number": "7",
+          "title": "Signatures"
+        }
+      ]
+    },
+    {
+      "path": "addenda/addendum_smoke_free.v1.docx",
+      "category": "addenda",
+      "format": "docx",
+      "doc_id": "maple-court-addendum-smoke-free-v1",
+      "property_id": "maple-court",
+      "doc_type": "addendum_smoke_free",
+      "title": "Smoke-Free Addendum (Template) — Maple Court",
+      "version": 1,
+      "effective_from": "2025-04-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 1,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Civ. Code 1947.5"
+      ],
+      "disposition_hint": "answer",
+      "is_template": true,
+      "sections": [
+        {
+          "number": "1",
+          "title": "What this addendum is"
+        },
+        {
+          "number": "2",
+          "title": "The policy"
+        },
+        {
+          "number": "3",
+          "title": "Where it applies"
+        },
+        {
+          "number": "4",
+          "title": "What is covered"
+        },
+        {
+          "number": "5",
+          "title": "Guests"
+        },
+        {
+          "number": "6",
+          "title": "Breach"
+        },
+        {
+          "number": "7",
+          "title": "What the owner does not promise"
+        },
+        {
+          "number": "8",
+          "title": "Signatures"
+        }
+      ]
+    },
+    {
+      "path": "addenda/addendum_utility_allocation.v1.docx",
+      "category": "addenda",
+      "format": "docx",
+      "doc_id": "maple-court-addendum-utility-allocation-v1",
+      "property_id": "maple-court",
+      "doc_type": "addendum_utility_allocation",
+      "title": "Utility Allocation Addendum (Template) — Maple Court",
+      "version": 1,
+      "effective_from": "2025-04-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 1,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Civ. Code 1940.9"
+      ],
+      "disposition_hint": "answer",
+      "is_template": true,
+      "sections": [
+        {
+          "number": "1",
+          "title": "What this addendum is"
+        },
+        {
+          "number": "2",
+          "title": "Why the units are not separately metered"
+        },
+        {
+          "number": "3",
+          "title": "Which utilities are allocated"
+        },
+        {
+          "number": "4",
+          "title": "The allocation formula"
+        },
+        {
+          "number": "5",
+          "title": "No markup"
+        },
+        {
+          "number": "6",
+          "title": "Billing cycle"
+        },
+        {
+          "number": "7",
+          "title": "Right to see the underlying bill"
+        },
+        {
+          "number": "8",
+          "title": "Disputes"
+        },
+        {
+          "number": "9",
+          "title": "Utilities in the resident's own name"
+        },
+        {
+          "number": "10",
+          "title": "Signatures"
+        }
+      ]
+    },
+    {
+      "path": "rules/building_rules.v1.txt",
+      "category": "rules",
+      "format": "txt",
+      "doc_id": "maple-court-building-rules-v1",
+      "property_id": "maple-court",
+      "doc_type": "building_rules",
+      "title": "Building Rules & Shared Areas — Maple Court",
+      "version": 1,
+      "effective_from": "2023-01-01",
+      "effective_to": "2025-05-31",
+      "effective_to_eff": "2025-05-31",
+      "supersedes": null,
+      "superseded_by": "maple-court-building-rules-v2",
+      "is_superseded": true,
+      "is_latest_version": false,
+      "chain_length": 2,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "Scope"
+        },
+        {
+          "number": "2",
+          "title": "Quiet hours"
+        },
+        {
+          "number": "3",
+          "title": "Laundry room"
+        },
+        {
+          "number": "4",
+          "title": "Courtyard"
+        },
+        {
+          "number": "5",
+          "title": "Trash"
+        },
+        {
+          "number": "6",
+          "title": "Parking"
+        },
+        {
+          "number": "7",
+          "title": "Guests"
+        },
+        {
+          "number": "8",
+          "title": "Smoking"
+        }
+      ]
+    },
+    {
+      "path": "rules/building_rules.v2.txt",
+      "category": "rules",
+      "format": "txt",
+      "doc_id": "maple-court-building-rules-v2",
+      "property_id": "maple-court",
+      "doc_type": "building_rules",
+      "title": "Building Rules & Shared Areas — Maple Court",
+      "version": 2,
+      "effective_from": "2025-06-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": "maple-court-building-rules-v1",
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 2,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Civ. Code 1947.5 (smoking policy)"
+      ],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "Scope"
+        },
+        {
+          "number": "2",
+          "title": "Quiet hours"
+        },
+        {
+          "number": "3",
+          "title": "Noise generally"
+        },
+        {
+          "number": "4",
+          "title": "Laundry room"
+        },
+        {
+          "number": "5",
+          "title": "Courtyard"
+        },
+        {
+          "number": "6",
+          "title": "Trash and recycling"
+        },
+        {
+          "number": "7",
+          "title": "Parking"
+        },
+        {
+          "number": "8",
+          "title": "Guests"
+        },
+        {
+          "number": "9",
+          "title": "Smoking"
+        },
+        {
+          "number": "10",
+          "title": "Balconies, patios, and walkways"
+        },
+        {
+          "number": "11",
+          "title": "Bicycles and storage"
+        },
+        {
+          "number": "12",
+          "title": "Concerns about a neighbour"
+        }
+      ]
+    },
+    {
+      "path": "policies/deposit_policy.v1.txt",
+      "category": "policies",
+      "format": "txt",
+      "doc_id": "maple-court-deposit-policy-v1",
+      "property_id": "maple-court",
+      "doc_type": "deposit_policy",
+      "title": "Security Deposit Policy — Maple Court",
+      "version": 1,
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 1,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "AB 12 (2023), eff. 2024-07-01",
+        "Civ. Code 1950.5",
+        "AB 2801 (2024)",
+        "AB 414 (2025), eff. 2026-01-01"
+      ],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "Deposit limit"
+        },
+        {
+          "number": "2",
+          "title": "What the deposit is not"
+        },
+        {
+          "number": "3",
+          "title": "Photographs at move-in"
+        },
+        {
+          "number": "4",
+          "title": "Initial inspection before move-out"
+        },
+        {
+          "number": "5",
+          "title": "Photographs at move-out"
+        },
+        {
+          "number": "6",
+          "title": "Permitted deductions"
+        },
+        {
+          "number": "7",
+          "title": "Itemization and return"
+        },
+        {
+          "number": "8",
+          "title": "How the refund is sent"
+        },
+        {
+          "number": "9",
+          "title": "Questions about a specific deposit"
+        }
+      ]
+    },
+    {
+      "path": "disclosures/disclosure_lead.v1.pdf",
+      "category": "disclosures",
+      "format": "pdf",
+      "doc_id": "maple-court-disclosure-lead-v1",
+      "property_id": "maple-court",
+      "doc_type": "disclosure_lead",
+      "title": "Lead-Based Paint Disclosure — Maple Court",
+      "version": 1,
+      "effective_from": "2024-01-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 1,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "42 U.S.C. 4852d",
+        "24 CFR part 35 / 40 CFR part 745"
+      ],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "Why this disclosure exists"
+        },
+        {
+          "number": "2",
+          "title": "Lead warning statement"
+        },
+        {
+          "number": "3",
+          "title": "What the owner knows"
+        },
+        {
+          "number": "4",
+          "title": "Records provided to residents"
+        },
+        {
+          "number": "5",
+          "title": "Pamphlet"
+        },
+        {
+          "number": "6",
+          "title": "Renovation and repair work"
+        },
+        {
+          "number": "7",
+          "title": "What residents should do"
+        }
+      ]
+    },
+    {
+      "path": "disclosures/disclosures.v1.pdf",
+      "category": "disclosures",
+      "format": "pdf",
+      "doc_id": "maple-court-disclosures-v1",
+      "property_id": "maple-court",
+      "doc_type": "disclosures",
+      "title": "Required Disclosures Packet — Maple Court",
+      "version": 1,
+      "effective_from": "2025-04-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 1,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Civ. Code 1954.603 (bed bugs)",
+        "Civ. Code 1940.9 (shared utility metering)",
+        "Civ. Code 1947.5 (smoking policy)",
+        "Civ. Code 2079.10a (Megan's Law)",
+        "H&S Code 25400.28 (methamphetamine)",
+        "H&S Code 25915 (asbestos)",
+        "Civ. Code 1947.12 / 1946.2 (AB 1482 coverage)"
+      ],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "About this packet"
+        },
+        {
+          "number": "2",
+          "title": "Bed bugs"
+        },
+        {
+          "number": "3",
+          "title": "Mold"
+        },
+        {
+          "number": "4",
+          "title": "Asbestos"
+        },
+        {
+          "number": "5",
+          "title": "Megan's Law notice"
+        },
+        {
+          "number": "6",
+          "title": "Methamphetamine and fentanyl contamination"
+        },
+        {
+          "number": "7",
+          "title": "Smoking policy"
+        },
+        {
+          "number": "8",
+          "title": "Utility allocation"
+        },
+        {
+          "number": "9",
+          "title": "Rent cap and just cause coverage"
+        },
+        {
+          "number": "10",
+          "title": "Lead-based paint"
+        },
+        {
+          "number": "11",
+          "title": "Flood hazard"
+        }
+      ]
+    },
+    {
+      "path": "lease/lease_standard.v1.docx",
+      "category": "lease",
+      "format": "docx",
+      "doc_id": "maple-court-lease-standard-v1",
+      "property_id": "maple-court",
+      "doc_type": "lease_standard",
+      "title": "Standard Residential Lease Terms — Maple Court",
+      "version": 1,
+      "effective_from": "2025-04-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 1,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Civ. Code 1946.1",
+        "Civ. Code 1947.12",
+        "Civ. Code 1950.5",
+        "Civ. Code 1954",
+        "Civ. Code 1671(d)",
+        "LBMC ch. 8.99"
+      ],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "Scope of these terms"
+        },
+        {
+          "number": "2",
+          "title": "Premises and occupancy"
+        },
+        {
+          "number": "3",
+          "title": "Term"
+        },
+        {
+          "number": "4",
+          "title": "Rent"
+        },
+        {
+          "number": "5",
+          "title": "Late payment"
+        },
+        {
+          "number": "6",
+          "title": "Security deposit"
+        },
+        {
+          "number": "7",
+          "title": "Utilities"
+        },
+        {
+          "number": "8",
+          "title": "Condition of the premises"
+        },
+        {
+          "number": "9",
+          "title": "Maintenance and repairs"
+        },
+        {
+          "number": "10",
+          "title": "Owner access to the unit"
+        },
+        {
+          "number": "11",
+          "title": "Alterations"
+        },
+        {
+          "number": "12",
+          "title": "Use of shared areas"
+        },
+        {
+          "number": "13",
+          "title": "Quiet enjoyment"
+        },
+        {
+          "number": "14",
+          "title": "Animals"
+        },
+        {
+          "number": "15",
+          "title": "Smoking"
+        },
+        {
+          "number": "16",
+          "title": "Parking"
+        },
+        {
+          "number": "17",
+          "title": "Renters insurance"
+        },
+        {
+          "number": "18",
+          "title": "Guests"
+        },
+        {
+          "number": "19",
+          "title": "Ending the tenancy"
+        },
+        {
+          "number": "20",
+          "title": "Rent increases and renewal"
+        },
+        {
+          "number": "21",
+          "title": "Addenda and disclosures"
+        }
+      ]
+    },
+    {
+      "path": "policies/maintenance_policy.v1.pdf",
+      "category": "policies",
+      "format": "pdf",
+      "doc_id": "maple-court-maintenance-policy-v1",
+      "property_id": "maple-court",
+      "doc_type": "maintenance_policy",
+      "title": "Maintenance & Repair Policy — Maple Court",
+      "version": 1,
+      "effective_from": "2025-04-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 1,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Civ. Code 1941.1",
+        "Civ. Code 1954"
+      ],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "How to make a request"
+        },
+        {
+          "number": "2",
+          "title": "Priority levels"
+        },
+        {
+          "number": "3",
+          "title": "What counts as an emergency"
+        },
+        {
+          "number": "4",
+          "title": "Reporting an emergency"
+        },
+        {
+          "number": "5",
+          "title": "Access to the unit"
+        },
+        {
+          "number": "6",
+          "title": "Owner responsibilities"
+        },
+        {
+          "number": "7",
+          "title": "Resident responsibilities"
+        },
+        {
+          "number": "8",
+          "title": "Damage beyond ordinary wear"
+        },
+        {
+          "number": "9",
+          "title": "Status of a specific request"
+        }
+      ]
+    },
+    {
+      "path": "policies/movein_moveout.v1.pdf",
+      "category": "policies",
+      "format": "pdf",
+      "doc_id": "maple-court-movein-moveout-v1",
+      "property_id": "maple-court",
+      "doc_type": "movein_moveout",
+      "title": "Move-In & Move-Out Procedures — Maple Court",
+      "version": 1,
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 1,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Civ. Code 1950.5",
+        "Civ. Code 1946.1",
+        "AB 2801 (2024)",
+        "AB 414 (2025), eff. 2026-01-01"
+      ],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "Before move-in"
+        },
+        {
+          "number": "2",
+          "title": "Move-in inspection and photographs"
+        },
+        {
+          "number": "3",
+          "title": "Keys"
+        },
+        {
+          "number": "4",
+          "title": "Utilities at move-in"
+        },
+        {
+          "number": "5",
+          "title": "Moving day"
+        },
+        {
+          "number": "6",
+          "title": "Giving notice to move out"
+        },
+        {
+          "number": "7",
+          "title": "The optional initial inspection"
+        },
+        {
+          "number": "8",
+          "title": "Cleaning expected at move-out"
+        },
+        {
+          "number": "9",
+          "title": "Move-out photographs"
+        },
+        {
+          "number": "10",
+          "title": "Returning keys"
+        },
+        {
+          "number": "11",
+          "title": "Deposit accounting"
+        },
+        {
+          "number": "12",
+          "title": "Forwarding address"
+        }
+      ]
+    },
+    {
+      "path": "policies/payment_policy.v1.pdf",
+      "category": "policies",
+      "format": "pdf",
+      "doc_id": "maple-court-payment-policy-v1",
+      "property_id": "maple-court",
+      "doc_type": "payment_policy",
+      "title": "Payment & Billing Policy — Maple Court",
+      "version": 1,
+      "effective_from": "2022-01-01",
+      "effective_to": "2024-06-30",
+      "effective_to_eff": "2024-06-30",
+      "supersedes": null,
+      "superseded_by": "maple-court-payment-policy-v2",
+      "is_superseded": true,
+      "is_latest_version": false,
+      "chain_length": 3,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Civ. Code 1671(d)",
+        "Civ. Code 1950.5 (pre-AB 12)"
+      ],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "When rent is due"
+        },
+        {
+          "number": "2",
+          "title": "Grace period"
+        },
+        {
+          "number": "3",
+          "title": "Late fee"
+        },
+        {
+          "number": "4",
+          "title": "Returned payments"
+        },
+        {
+          "number": "5",
+          "title": "How to pay"
+        },
+        {
+          "number": "6",
+          "title": "Security deposit limit"
+        }
+      ]
+    },
+    {
+      "path": "policies/payment_policy.v2.pdf",
+      "category": "policies",
+      "format": "pdf",
+      "doc_id": "maple-court-payment-policy-v2",
+      "property_id": "maple-court",
+      "doc_type": "payment_policy",
+      "title": "Payment & Billing Policy — Maple Court",
+      "version": 2,
+      "effective_from": "2024-07-01",
+      "effective_to": "2025-03-31",
+      "effective_to_eff": "2025-03-31",
+      "supersedes": "maple-court-payment-policy-v1",
+      "superseded_by": "maple-court-payment-policy-v3",
+      "is_superseded": true,
+      "is_latest_version": false,
+      "chain_length": 3,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "AB 12 (2023), eff. 2024-07-01",
+        "Civ. Code 1671(d)"
+      ],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "When rent is due"
+        },
+        {
+          "number": "2",
+          "title": "Grace period"
+        },
+        {
+          "number": "3",
+          "title": "Late fee"
+        },
+        {
+          "number": "4",
+          "title": "Returned payments"
+        },
+        {
+          "number": "5",
+          "title": "How to pay"
+        },
+        {
+          "number": "6",
+          "title": "Partial payments"
+        },
+        {
+          "number": "7",
+          "title": "Administrative fees"
+        },
+        {
+          "number": "8",
+          "title": "Security deposit limit"
+        }
+      ]
+    },
+    {
+      "path": "policies/payment_policy.v3.pdf",
+      "category": "policies",
+      "format": "pdf",
+      "doc_id": "maple-court-payment-policy-v3",
+      "property_id": "maple-court",
+      "doc_type": "payment_policy",
+      "title": "Payment & Billing Policy — Maple Court",
+      "version": 3,
+      "effective_from": "2025-04-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": "maple-court-payment-policy-v2",
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 3,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Civ. Code 1671(d)",
+        "SB 611 (2024), eff. 2025-04-01",
+        "CCP 1161"
+      ],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "When rent is due"
+        },
+        {
+          "number": "2",
+          "title": "Grace period"
+        },
+        {
+          "number": "3",
+          "title": "Late fee"
+        },
+        {
+          "number": "4",
+          "title": "Returned payments"
+        },
+        {
+          "number": "5",
+          "title": "How to pay"
+        },
+        {
+          "number": "6",
+          "title": "Partial payments"
+        },
+        {
+          "number": "7",
+          "title": "How payments are applied"
+        },
+        {
+          "number": "8",
+          "title": "Fees that are not charged"
+        },
+        {
+          "number": "9",
+          "title": "Utility charges"
+        },
+        {
+          "number": "10",
+          "title": "Notices about unpaid rent"
+        }
+      ]
+    },
+    {
+      "path": "policies/pet_policy.v1.pdf",
+      "category": "policies",
+      "format": "pdf",
+      "doc_id": "maple-court-pet-policy-v1",
+      "property_id": "maple-court",
+      "doc_type": "pet_policy",
+      "title": "Pet & Animal Policy — Maple Court",
+      "version": 1,
+      "effective_from": "2025-04-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 1,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Gov. Code 12955 (FEHA)",
+        "42 U.S.C. 3604 (FHA)",
+        "AB 468 (2021)"
+      ],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "Assistance animals are not pets"
+        },
+        {
+          "number": "2",
+          "title": "Approval required"
+        },
+        {
+          "number": "3",
+          "title": "Number and weight"
+        },
+        {
+          "number": "4",
+          "title": "Types of animal"
+        },
+        {
+          "number": "5",
+          "title": "Pet deposit and pet rent"
+        },
+        {
+          "number": "6",
+          "title": "Conduct and control"
+        },
+        {
+          "number": "7",
+          "title": "Waste"
+        },
+        {
+          "number": "8",
+          "title": "Damage"
+        },
+        {
+          "number": "9",
+          "title": "Visiting animals"
+        }
+      ]
+    },
+    {
+      "path": "property/property_fact_sheet.v1.md",
+      "category": "property",
+      "format": "md",
+      "doc_id": "maple-court-property-fact-sheet-v1",
+      "property_id": "maple-court",
+      "doc_type": "property_fact_sheet",
+      "title": "Property Fact Sheet — Maple Court",
+      "version": 1,
+      "effective_from": "2022-01-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 1,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "The property"
+        },
+        {
+          "number": "2",
+          "title": "Management office"
+        },
+        {
+          "number": "3",
+          "title": "Emergency maintenance"
+        },
+        {
+          "number": "4",
+          "title": "Resident portal"
+        },
+        {
+          "number": "5",
+          "title": "On-site"
+        },
+        {
+          "number": "6",
+          "title": "What is not at this property"
+        },
+        {
+          "number": "7",
+          "title": "Documents for this property"
+        }
+      ]
+    },
+    {
+      "path": "policies/rent_increase_policy.v1.pdf",
+      "category": "policies",
+      "format": "pdf",
+      "doc_id": "maple-court-rent-increase-policy-v1",
+      "property_id": "maple-court",
+      "doc_type": "rent_increase_policy",
+      "title": "Rent Increase & Renewal Policy — Maple Court",
+      "version": 1,
+      "effective_from": "2025-08-01",
+      "effective_to": "2026-07-31",
+      "effective_to_eff": "2026-07-31",
+      "supersedes": null,
+      "superseded_by": "maple-court-rent-increase-policy-v2",
+      "is_superseded": true,
+      "is_latest_version": false,
+      "chain_length": 2,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Civ. Code 1947.12",
+        "Civ. Code 827"
+      ],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "Coverage"
+        },
+        {
+          "number": "2",
+          "title": "The annual limit"
+        },
+        {
+          "number": "3",
+          "title": "How often rent may be increased"
+        },
+        {
+          "number": "4",
+          "title": "Notice"
+        },
+        {
+          "number": "5",
+          "title": "Questions about a specific increase"
+        }
+      ]
+    },
+    {
+      "path": "policies/rent_increase_policy.v2.pdf",
+      "category": "policies",
+      "format": "pdf",
+      "doc_id": "maple-court-rent-increase-policy-v2",
+      "property_id": "maple-court",
+      "doc_type": "rent_increase_policy",
+      "title": "Rent Increase & Renewal Policy — Maple Court",
+      "version": 2,
+      "effective_from": "2026-08-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": "maple-court-rent-increase-policy-v1",
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 2,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Civ. Code 1947.12",
+        "Civ. Code 827",
+        "TODO(verify): 8.7% AB 1482 maximum for Los Angeles County, cap year beginning 2026-08-01"
+      ],
+      "disposition_hint": "answer",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "Coverage"
+        },
+        {
+          "number": "2",
+          "title": "The annual limit"
+        },
+        {
+          "number": "3",
+          "title": "How often rent may be increased"
+        },
+        {
+          "number": "4",
+          "title": "Notice"
+        },
+        {
+          "number": "5",
+          "title": "Renewal"
+        },
+        {
+          "number": "6",
+          "title": "Questions about a specific increase"
+        }
+      ]
+    },
+    {
+      "path": "disclosures/tenant_protections_notice.v1.pdf",
+      "category": "disclosures",
+      "format": "pdf",
+      "doc_id": "maple-court-tenant-protections-notice-v1",
+      "property_id": "maple-court",
+      "doc_type": "tenant_protections_notice",
+      "title": "Just Cause & Relocation Notice — Maple Court",
+      "version": 1,
+      "effective_from": "2025-01-01",
+      "effective_to": null,
+      "effective_to_eff": "9999-12-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "is_superseded": false,
+      "is_latest_version": true,
+      "chain_length": 1,
+      "jurisdiction": "Long Beach, CA",
+      "issuing_office": "Alder Grove Property Management",
+      "authority_refs": [
+        "Civ. Code 1946.2",
+        "LBMC ch. 8.99"
+      ],
+      "disposition_hint": "escalate",
+      "is_template": false,
+      "sections": [
+        {
+          "number": "1",
+          "title": "Read this first"
+        },
+        {
+          "number": "2",
+          "title": "Coverage"
+        },
+        {
+          "number": "3",
+          "title": "Just cause"
+        },
+        {
+          "number": "4",
+          "title": "Relocation assistance"
+        },
+        {
+          "number": "5",
+          "title": "Where to get help"
+        }
+      ]
+    }
+  ]
+}

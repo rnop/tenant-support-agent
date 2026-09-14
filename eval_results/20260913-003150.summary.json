@@ -1,0 +1,85 @@
+{
+  "results": "eval_results/20260913-003150.jsonl",
+  "rows": 49,
+  "checks": {
+    "route": {
+      "passed": 49,
+      "total": 49
+    },
+    "source": {
+      "passed": 40,
+      "total": 40
+    },
+    "currency": {
+      "passed": 40,
+      "total": 40
+    },
+    "contact": {
+      "passed": 5,
+      "total": 5
+    }
+  },
+  "failures": [],
+  "metrics": {
+    "all": {
+      "n": 40,
+      "faithfulness": 0.9816666666666667,
+      "answer_relevancy": 0.8040972689175145,
+      "context_precision": 0.9395433672931344,
+      "context_recall": 0.9875,
+      "factual_correctness": 0.975
+    },
+    "by_category": {
+      "addenda": {
+        "n": 5,
+        "faithfulness": 0.9333333333333332,
+        "answer_relevancy": 0.8424726420203941,
+        "context_precision": 0.9875850339747352,
+        "context_recall": 0.9,
+        "factual_correctness": 1.0
+      },
+      "disclosures": {
+        "n": 3,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9341435336507792,
+        "context_precision": 0.8907407407054938,
+        "context_recall": 1.0,
+        "factual_correctness": 1.0
+      },
+      "lease": {
+        "n": 1,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7018403180286977,
+        "context_precision": 0.99999999995,
+        "context_recall": 1.0,
+        "factual_correctness": 1.0
+      },
+      "policies": {
+        "n": 19,
+        "faithfulness": 0.9789473684210527,
+        "answer_relevancy": 0.7680723850339658,
+        "context_precision": 0.8954344193359054,
+        "context_recall": 1.0,
+        "factual_correctness": 0.9473684210526315
+      },
+      "property": {
+        "n": 2,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7864241316620632,
+        "context_precision": 0.9999999999,
+        "context_recall": 1.0,
+        "factual_correctness": 1.0
+      },
+      "rules": {
+        "n": 10,
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8281033048648101,
+        "context_precision": 0.9958333332603033,
+        "context_recall": 1.0,
+        "factual_correctness": 1.0
+      }
+    }
+  },
+  "metric_errors": 0,
+  "rate_limit_retries": 38
+}

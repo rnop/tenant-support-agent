@@ -1,0 +1,46 @@
+# Core
+fastapi
+uvicorn
+python-dotenv
+pandas
+tiktoken
+
+# DB / pool
+psycopg[binary,pool]
+
+# Ingestion helpers
+unstructured
+unstructured[pdf]
+unstructured[docx]
+unstructured[image]
+markdown
+pytesseract
+pymupdf
+
+#Langchain
+langchain
+langchain-openai
+langchain-community<0.4   # ragas 0.4.x imports chat_models.vertexai, removed in community 0.4
+langchain-text-splitters
+langchain-postgres
+
+#Caching
+redis
+langchain-redis
+
+#Re-Ranking
+cohere
+langchain-cohere
+
+#Evals
+ragas>=0.4                  # pip backtracks to 0.3.x under the community pin; 0.3.x imports PIL without declaring Pillow
+
+# --- Added 2026-09-05: imported by the code but missing from the original file ---
+langchain-classic          # app code does 'from langchain_classic...' (LangChain 1.x split)
+asyncpg                    # DATABASE_URL uses postgresql+asyncpg://
+
+# --- Added: property-local dates ---
+tzdata                     # zoneinfo fallback where the OS has no tz database.
+                           # The Docker image uses Debian's /usr/share/zoneinfo, so
+                           # this is not in requirements.lock.txt; it matters for
+                           # running scripts/ on a Windows host.
