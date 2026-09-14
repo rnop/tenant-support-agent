@@ -1,12 +1,12 @@
 # RAG-Based Resident Assistant
 
-A chatbot that answers resident's questions from a property's lease, policies, and building rules grounded in official documents. Answers cite the exact document version and section, and guardrails sending emergencies straight to a phone number instead of a general response.
+A chatbot that answers residents' questions from a property's lease, policies, and building rules, grounded in official documents. Answers cite the exact document version and section, and guardrails send emergencies straight to a phone number instead of a general response.
 
 ## Tech Stack
 
 **Local Stack:** FastAPI, LangChain, PostgreSQL + pgvector + tsvector, OpenAI (`text-embedding-3-small`, `gpt-4o-mini`), Cohere Rerank, Redis semantic cache, RAGAS evals, Docker.
 
-**Production Stack (AWS)**: FastAPI , LangChain, Amazon RDS for PostgreSQL + pgvector + tsvector, Amazon Bedrock (Claude, Titan Text Embeddings V2, Cohere Rerank), Amazon ElastiCache semantic cache, Amazon S3 document store, RAGAS evals, Docker on Amazon ECS (Fargate).
+**Production Stack (AWS)**: FastAPI, LangChain, Amazon RDS for PostgreSQL + pgvector + tsvector, Amazon Bedrock (Claude, Titan Text Embeddings V2, Cohere Rerank), Amazon ElastiCache semantic cache, Amazon S3 document store, RAGAS evals, Docker on Amazon ECS (Fargate).
 
 ---
 
@@ -14,7 +14,7 @@ A chatbot that answers resident's questions from a property's lease, policies, a
 
 | Stage | Detail |
 |---|---|
-| **Ingestion** | Loads `txt`, `md`, `pdf` and `docx` files and processed using LangChain, strips repeated headers and footers, and splits at the 185 section headings in the manifest (900-character chunks, 120 overlap, within a section). Every chunk carries its document version, section and filterable metadata columns. |
+| **Ingestion** | Loads `txt`, `md`, `pdf` and `docx` files with LangChain, strips repeated headers and footers, and splits at the 185 section headings in the manifest (900-character chunks, 120 overlap, within a section). Every chunk carries its document version, section and filterable metadata columns. |
 | **Storage** | PostgreSQL table holds 1536-dimension `text-embedding-3-small` vectors (HNSW index), a GIN index (tsvector), and indexes on the effective dates, property and document type, and category. |
 | **SQL Metadata Filters** | Applied in SQL before both searches. Every search is limited to the property and to documents in force on the question's date (`effective_from <= as_of <= effective_to`), `category` (lease, addenda, policies, rules, disclosures, property), or a `doc_type` (e.g. `payment_policy`).|
 | **Hybrid retrieval** | A pgvector dense retrieval (cosine similarity) and a `tsvector` keyword retrieval (`websearch_to_tsquery`, ranked by `ts_rank`) run concurrently, 40 candidates each, and are merged with Reciprocal Rank Fusion (k = 60).|
@@ -43,7 +43,7 @@ flowchart TB
 
 ## Ingestion
 
-**Ingestion** reads `data/manifest.json` and `scripts/build_manifest.py` that loads txt, md, pdf and docx files, strips repeated page headers and footers, splits documents at their section headings, and stores the chunks with nine filterable metadata columns in PostgreSQL. Re-running ingestion replaces the property's chunks rather than duplicating them.
+**Ingestion** (`app/ingest.py`) reads `data/manifest.json`, which `scripts/build_manifest.py` builds from the raw document metadata. It loads the txt, md, pdf and docx files, strips repeated page headers and footers, splits documents at their section headings, and stores the chunks with nine filterable metadata columns in PostgreSQL. Re-running ingestion replaces the property's chunks rather than duplicating them.
 
 ## Evaluation
 
