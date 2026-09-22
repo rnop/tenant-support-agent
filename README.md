@@ -4,9 +4,9 @@ A chatbot that answers residents' questions from a property's lease, policies, a
 
 ## Tech Stack
 
-**Local Stack:** FastAPI, LangChain, PostgreSQL + pgvector + tsvector, OpenAI (`text-embedding-3-small`, `gpt-4o-mini`), Cohere Rerank, Redis semantic cache, RAGAS evals, Docker.
+**Local Stack:** FastAPI, LangChain, PostgreSQL + pgvector + tsvector, OpenAI (`text-embedding-3-small`, `gpt-4o-mini`), Cohere Rerank, Redis semantic cache, RAGAS evals, LangSmith observability, Docker.
 
-**Production Stack (AWS)**: FastAPI, LangChain, Amazon RDS for PostgreSQL + pgvector + tsvector, Amazon Bedrock (Claude, Titan Text Embeddings V2, Cohere Rerank), Amazon ElastiCache semantic cache, Amazon S3 document store, RAGAS evals, Docker on Amazon ECS (Fargate).
+**Production Stack (AWS)**: FastAPI, LangChain, Amazon RDS for PostgreSQL + pgvector + tsvector, Amazon Bedrock (Claude, Titan Text Embeddings V2, Cohere Rerank), Amazon ElastiCache semantic cache, Amazon S3 document store, RAGAS evals,LangSmith observability, Docker on Amazon ECS (Fargate).
 
 ---
 

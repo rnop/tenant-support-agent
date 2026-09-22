@@ -281,7 +281,10 @@ async def _build_chain(
             model="rerank-multilingual-v3.0",
         ),
     )
-    llm = ChatOpenAI(model="gpt-4o-mini")
+    # Temperature 0: figures, citations and the "I don't know." marker must come out
+    # the same way every time, and the semantic cache stores whichever sample it saw.
+    # 600 tokens is ample for an answer drawn from 8 chunks.
+    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0, max_tokens=600)
     doc_chain = create_stuff_documents_chain(
         llm,
         PROMPT,
